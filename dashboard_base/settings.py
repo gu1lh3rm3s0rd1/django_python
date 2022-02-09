@@ -27,7 +27,7 @@ SECRET_KEY = os.environ.get('SECRET_KEY')
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = os.environ.get('DEBUG') == True
 
-ALLOWED_HOSTS = ['https://dashboardchi.herokuapp.com/']
+ALLOWED_HOSTS = ['https://webdevchi.herokuapp.com/']
 
 
 # Application definition
@@ -122,9 +122,9 @@ STATIC_URL = 'static/'
 
 STATIC_ROOT = os.path.join(BASE_DIR, 'staticfile')
 
-django_heroku.settings(locals())
-
 # Default primary key field type
 # https://docs.djangoproject.com/en/4.0/ref/settings/#default-auto-field
 
 DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
+
+django_heroku.settings(locals())
