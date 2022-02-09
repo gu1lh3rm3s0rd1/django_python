@@ -1,1 +1,1 @@
-# django_python
+# django_exerc
