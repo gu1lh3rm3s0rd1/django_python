@@ -1,0 +1,14 @@
+{% extends "dashboard/base.html" %}
+
+{% block title %} My First App {% endblock %}
+
+{% block content %}
+      {% for post in post_list %} 
+         <article>
+             <p class="date">
+                  Publicado em {{ post.created }} por {{ post.author }}
+             </p>
+             {{ post.body|linebreaks|truncatewords:10 }}
+         </article>
+      {% endfor %}
+{% endblock %}
